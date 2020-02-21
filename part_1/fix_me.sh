@@ -12,18 +12,24 @@ if ! [[ $a =~ ^[+-]?[0-9]+([.][0-9]+)?$ && $b =~ ^[+-]?[0-9]+([.][0-9]+)?$ ]]
 exit 192
 fi
 
-add=$((a + b))
+add=$(bc<<< "scale=2; $a + $b")
 
-echo Addition of a and b are $add
+echo Addition of a and b are $add 
 
-sub=$((a - b))
+sub=$(bc<<< "scale=2; $a - $b")
 echo Subtraction of a and b are $sub
 
-mul=$((a * b))
+mul=$(bc<<< "scale=2; $a * $b")
 echo Multiplication of a and b are $mul
 
-div=$((a \/ b))
+div=$(bc<<< "scale=2; $a / $b")
 echo division of a and b are $div
+#if a and b are integer, then there is modulus, else quit
+if ! [[ $a =~ ^[+-]?[0-9]+?$ && $b =~ ^[+-]?[0-9]+?$ ]]
+     then
+    printf "\n Sorry only integers for modulus !!!\n\n"
+exit 192
+fi
 
 mod=$((a % b))
 echo Modulus of a and b are $mod
