@@ -24,6 +24,7 @@ echo Multiplication of a and b are $mul
 
 div=$(bc<<< "scale=2; $a / $b")
 echo division of a and b are $div
+
 #if a and b are integer, then there is modulus, else quit
 if ! [[ $a =~ ^[+-]?[0-9]+?$ && $b =~ ^[+-]?[0-9]+?$ ]]
      then
