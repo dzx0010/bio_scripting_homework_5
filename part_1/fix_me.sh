@@ -6,9 +6,9 @@ read a
 echo 'Enter b : ' 
 read b
 # define a and b must be integer
-if ! [[ $a =~ ^[0-9]+$ && $b =~ ^[0-9]+$ ]]
+if ! [[ $a =~ ^[+-]?[0-9]+([.][0-9]+)?$ && $b =~ ^[+-]?[0-9]+([.][0-9]+)?$ ]]
      then
-    printf "\n Sorry integers only !!!\n\n"
+    printf "\n Sorry number only !!!\n\n"
 exit 192
 fi
 
