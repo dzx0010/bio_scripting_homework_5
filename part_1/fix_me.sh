@@ -2,11 +2,17 @@
 
 # Reading data from the user's input
 echo 'Enter a : '
-read a
+read a 
 echo 'Enter b : ' 
 read b
+# define a and b must be integer
+if ! [[ $a =~ ^[0-9]+$ && $b =~ ^[0-9]+$ ]]
+     then
+    printf "\n Sorry integers only !!!\n\n"
+exit 192
+fi
 
-add=$((a+b))
+add=$((a + b))
 
 echo Addition of a and b are $add
 
