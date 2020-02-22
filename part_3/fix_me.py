@@ -1,7 +1,7 @@
 #! /bin/bash/python3
 
 # Reading data from the user's input
-a = input("Enter a : ")
+a = input('Enter a : ')
 
 print("You entered", a, "which is a", type(a))
 
@@ -59,7 +59,7 @@ print("Now \"b\" equals", b, "and is a", type(b))
 
 
 total = a + b
- print("a + b =", total, ", which is a", type(total))
+print("a + b =", total, ", which is a", type(total))
 
 difference = a - b
 print("a - b =", difference, ", which is a", type(difference))
