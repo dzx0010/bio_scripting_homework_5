@@ -14,9 +14,10 @@ print("You entered", b, "which is a", type(b))
 # HINT: why would we be checking what type a and b are again?
 #       Let's assume we want a and b to be integers at this point
 #######################################################################
-
+a = int(a)
 print("What is", a, "now?", type(a))
-print("What is", b, "now?", type(a))
+b = int(b)
+print("What is", b, "now?", type(b))
 
 
 total = a + b
